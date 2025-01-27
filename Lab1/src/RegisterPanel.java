@@ -4,9 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RegisterPanel extends JPanel {
-    private final Register register = new Register();
-    private final JTextField input = new JTextField(10);
-    private final PursePanel changePanel = new PursePanel(); // Panel to display images
+    private Register register = new Register();
+    private JTextField input = new JTextField(10);
+    private PursePanel changePanel = new PursePanel(); // Panel to display images
 
     public RegisterPanel() {
         setLayout(new BorderLayout());
@@ -20,7 +20,6 @@ public class RegisterPanel extends JPanel {
     }
 
     private class InputListener implements ActionListener {
-        @Override
         public void actionPerformed(ActionEvent e) {
             try {
                 double amt = Double.parseDouble(input.getText());
