@@ -9,9 +9,7 @@ public class PursePanel extends JPanel {
         this.purse = purse;
         repaint(); // Trigger a repaint when the Purse is updated
     }
-
-    @Override
-    protected void paintComponent(Graphics g) {
+   publuc void paintComponent(Graphics g) {
         super.paintComponent(g);
 
         if (purse == null || purse.getCash().isEmpty()) {
