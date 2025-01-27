@@ -16,7 +16,7 @@ public class RegisterPanel extends JPanel {
 
         input.addActionListener(new InputListener());
         add(inputPanel, BorderLayout.NORTH);
-        add(changePanel, BorderLayout.CENTER); // Add changePanel to display images
+        add(changePanel, BorderLayout.CENTER); // This Adds changePanel to display images
     }
 
     private class InputListener implements ActionListener {
@@ -24,7 +24,7 @@ public class RegisterPanel extends JPanel {
             try {
                 double amt = Double.parseDouble(input.getText());
                 Purse purse = register.makeChange(amt);
-                changePanel.setPurse(purse); // Pass the Purse to PursePanel
+                changePanel.setPurse(purse); // This Passes the Purse to PursePanel
             } catch (NumberFormatException ex) {
                 JOptionPane.showMessageDialog(RegisterPanel.this, "Invalid amount entered.");
             }
