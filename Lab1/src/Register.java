@@ -25,7 +25,7 @@ public class Register {
             if (count > 0) {
                 purse.add(denom, count);
                 amt -= count * denom.amt();
-                amt = Math.round(amt * 100.0) / 100.0; // Avoid floating-point precision issues
+                amt = Math.round(amt * 100.0) / 100.0;
             }
         }
         return purse;
