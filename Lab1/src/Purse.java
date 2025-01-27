@@ -20,9 +20,7 @@ public class Purse {
     }
 
     public double getValue() {
-        return cash.entrySet().stream()
-                .mapToDouble(e -> e.getKey().amt() * e.getValue())
-                .sum();
+        return cash.entrySet().stream().mapToDouble(e -> e.getKey().amt() * e.getValue()).sum();
     }
 
     public Map<Denomination, Integer> getCash() {
@@ -33,10 +31,7 @@ public class Purse {
     public String toString() {
         StringBuilder sb = new StringBuilder("Purse contents:\n");
         for (Map.Entry<Denomination, Integer> entry : cash.entrySet()) {
-            sb.append(entry.getValue())
-                    .append(" ")
-                    .append(entry.getKey().name())
-                    .append("\n");
+            sb.append(entry.getValue()).append(" ").append(entry.getKey().name()).append("\n");
         }
         return sb.toString();
     }
