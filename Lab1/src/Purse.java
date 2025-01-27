@@ -27,7 +27,6 @@ public class Purse {
         return cash;
     }
 
-    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Purse contents:\n");
         for (Map.Entry<Denomination, Integer> entry : cash.entrySet()) {
